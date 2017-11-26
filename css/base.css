@@ -1,0 +1,53 @@
+/*body {
+	min-width: 1300px;
+}*/
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd {
+		margin: 0;
+		padding: 0;
+	}
+	ul,ol {
+		list-style: none;
+	}
+	body {
+		font-size: 14px;
+		font-family: "微软雅黑";
+		height: 100%;
+	}
+
+	h1,h2,h3,h4,h5,h6,b,strong {
+		font-size: 1em;
+		font-weight: normal;
+	}
+	a{
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+	
+	i,em {
+		font-style: normal;
+	}
+	input,a{
+		outline: none;
+	}
+	.clear:after{
+		content: "";
+		display: block;
+		clear:both;
+	}
+	.clear {
+		zoom:1;
+	}
+	html{
+		overflow-x:hidden;
+	}
+	select,input,img{
+		vertical-align: middle;
+	}
+	.fl{
+		float: left;
+	}
+	.fr{
+		float:right;
+	}

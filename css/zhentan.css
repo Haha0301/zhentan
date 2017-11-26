@@ -1,0 +1,388 @@
+.wrap {
+  width: 100%;
+}
+.navCon {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.logoCon {
+  width: 100%;
+  background: #0e0e0e;
+  text-align: center;
+}
+.logoCon img {
+  width: 10.4%;
+  background-size: 100%;
+  padding: 35px 0 20px;
+}
+.navCon p {
+  width: 100%;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  color: #bbac8e;
+  line-height: 48px;
+  text-align: center;
+}
+.navCon p span {
+  margin-right: 7.8%;
+  cursor: pointer;
+}
+.navCon p span:last-child {
+  margin-right: 0;
+}
+.navCon p span.active {
+  font-weight: 700;
+}
+/*第一部分*/
+.banner {
+  width: 100%;
+  background: url('../img/bg_total.png') no-repeat;
+  background-size: 100% 100%;
+ /* height: 714px;*/
+  margin-top: -2%;
+  overflow: hidden;
+}
+.banner ol {
+  color: #fff;
+  margin: 28% 0 19% 26.7%;
+}
+.banner ol li:first-child {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.banner ol li:last-child {
+  font-size: 22px;
+}
+/*第二部分*/
+.core {
+  text-align: center;
+  background: url('../img/bg_check.png') #f6f6f6 no-repeat 0px 100%;
+  background-size: 100%;
+  overflow: hidden;
+}
+.core ul, .function ul, .scenarios ul, .team ul  {
+  /*margin-top: 86px;*/
+  margin-top: 6%;
+
+}
+.core ul {
+  padding-bottom: 2%;
+}
+.core ul>li:first-child, .function ul>li:first-child, .scenarios>ul>li:first-child, .team>ul>li:first-child{
+  font-size: 30px;
+  margin-bottom: 0.6%;
+  color: #2d2d2d;
+}
+.core ul>li:nth-child(2), .function ul>li:nth-child(2), .scenarios>ul>li:nth-child(2), .team>ul>li:nth-child(2) {
+  font-size: 18px;
+  margin-bottom: 1%;
+  color: #a4a4a4;
+}
+.core ul>li:nth-child(3), .function ul>li:nth-child(3), .scenarios>ul>li:nth-child(3), .team>ul>li:nth-child(3) {
+  width: 36px;
+  height: 5px;
+  background: #b09f7d;
+  margin: 0 auto 2.2%;
+}
+.core ul>li:nth-child(4) {
+  color: #979797;
+  line-height: 30px;
+  margin-bottom: 2.3%;
+} 
+.core ul .lastLi {
+  margin-left: 20.8%;
+}
+.core ul .lastLi p {
+  width: 42%;
+  margin-right: 8%;
+}
+.core ul .lastLi p img {
+  width: 100%;
+  background-size: 100%;
+}
+.core ul .lastLi ol {
+  margin-top: 15%;
+}
+.core ul .lastLi ol li:first-child img {
+  width: 45.5%;
+}
+.core ul .lastLi ol li:last-child {
+  color: #444;
+  font-size: 18px;
+  text-align: left;
+}
+/*第三部分*/
+.function {
+  text-align: center;
+  /*height: 630px;*/
+  background: url('../img/bg_core.png') no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+.function ul {
+  padding-bottom: 7%;
+}
+.function ul>li:first-child, .function ul>li:nth-child(2) {
+  color: #fffefe;
+}
+.function ul>li:nth-child(3) { 
+  margin-bottom: 6%;
+}
+.function ul ol {
+  width: 67%;
+  margin: 0 auto;
+}
+.function ul ol li {
+  width: 27%;
+  float: left;
+  background: #ededed;
+  border-radius: 5px;
+  padding: 3% 2.35% 2.5%;
+}
+.function ul ol li:hover{
+  transform: scale(1.05);
+  box-shadow:  0px 0px 10px 5px rgba(0,0,0,0.4);
+}
+.function ul ol li:nth-child(2) {
+  margin: 0 2.3%;
+}
+/*.function ul ol li h1 {
+  width: 21%;
+  margin: 0 auto;
+}
+.function ul ol li h1 img{
+  width: 100%;
+  background-size: 100%;
+}*/
+.function ul ol li h2 {
+  font-size: 20px;
+  color: #2d2d2d;
+  margin: 10px 0 15px;
+}
+.function ul ol li h3 {
+  color: #747474;
+  height: 90px;
+  text-align: left;
+  line-height: 20px;
+}
+/*第四部分*/
+.scenarios {
+  text-align: center;
+  overflow: hidden;
+}
+.scenarios ul {
+  margin-bottom: 3%;
+}
+.scenarios>ul>li:nth-child(3) { 
+  margin-bottom: 4%;
+}
+.scenarios ul p span{
+  margin-right: 4.5%;
+  font-size: 16px;
+  color: #494949;
+  cursor: pointer;
+}
+.scenarios ul p span.active {
+  color: #bbac8e;
+  font-weight: 700;
+}
+.scenarios ul p span:last-child {
+  margin-right: 0;
+}
+.scenarios ul ol {
+  width: 67.3%;
+  margin: 1.9% auto 0;
+
+}
+.scenarios ul ol li{
+  width: 24.3%;
+  float: left;
+  position: relative;
+}
+.scenarios ul ol li img {
+  width: 100%;
+  background-size: 100%;
+}
+.scenarios ul ol li p{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+.scenarios ul ol li p.active {
+   background: rgba(0, 0, 0, 0.35);
+}
+/*第五部分*/
+.team {
+  text-align: center;
+  overflow: hidden;
+}
+.team>ul {
+  padding-bottom: 2%;
+}
+.team>ul>li:nth-child(3) { 
+  margin-bottom: 2.7%;
+}
+.team>ul>li:nth-child(4) {
+  line-height: 30px;
+  color: #757575;
+  margin-bottom: 4.5%;
+}
+/*第六部分*/
+.our {
+  background: #1b1b1b;
+  overflow: hidden;
+}
+.our .our_top {
+  width: 69.4%;
+  margin: 6.5% auto 2.2%;
+  padding-bottom: 3.8%;
+  border-bottom: 1px solid #d3d3d3;
+} 
+.our .our_top p {
+  width: 49.5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.our .our_top p img {
+  width: 100%;
+  background-size: 100%;
+}
+.our .our_top dl {
+  width: 35.5%;
+  margin-right: 4%;
+  color: #fff;
+}
+.our .our_top dl dt {
+  font-size: 24px;
+  margin-bottom: 3.5%;
+}
+.our .our_top dl dd {
+  line-height: 25px;
+}
+.our .our_top dl .firstDd {
+  margin-bottom: 9%;
+}
+.our h1 {
+  color: #acacac;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+/*折叠导航*/
+.hide_nav {
+  width: 100%;
+  display: none;
+}
+.hide_nav .hide_btn {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  position: fixed;
+  right: 11%;
+  top: 2%;
+  text-align: center;
+}
+.hide_nav .hide_btn li {
+  width: 80%;
+  height: 2px;
+  background: #bbac8e;
+  margin-top: 21%;
+  margin-left: 10%;
+}
+.hide_nav .hide_con {
+  display: none;
+  background: rgb(0, 0, 0);
+  color: #bbac8e;
+  text-align: center;
+}
+.hide_nav .hide_con li {
+  padding: 2% 0;
+  cursor: pointer;
+}
+.hide_nav .hide_con.active {
+  display: block;
+}
+.hide_nav .hide_con li.active {
+  font-weight: 700;
+}
+
+/*适应小屏*/ 
+@media screen and (max-width: 950px) {
+  /*导航显示*/
+  .logoCon img {
+    padding: 4% 0 3%;
+  }
+  .navCon p {
+    display: none;
+  }
+  .hide_nav {
+    display: block;
+  }
+  /*banner图*/
+  .banner ol {
+    margin: 28% 0 19% 19.7%;
+  }
+  /*鉴定*/
+  .core ul>li:nth-child(4), .team>ul>li:nth-child(4) {
+    width: 75%;
+    margin: 5% auto 0;
+  } 
+  .core ul .lastLi p {
+    width: 60%;
+    margin-right: 0;
+    margin-top: 3%;
+  }
+  .core ul .lastLi ol {
+    width: 80%;
+    margin-top: 5%;
+  }
+  .core ul .lastLi ol li:last-child {
+    text-align: center;
+  }
+  /*核心优势*/
+  .function ul ol li {
+    width: 100%;
+    margin-bottom: 5%;
+    padding: 6% 4% 5%;
+  }
+  .function ul ol li:nth-child(2) {
+    margin: 0 0 5%;
+  }
+  /*应用场景*/
+  .scenarios ul p {
+    margin-bottom: 5%;
+  }
+  /*技术团队*/
+  .team>ul>li:last-child {
+    width: 75%;
+    margin: 5% auto;
+  }
+  .team>ul>li:last-child img {
+    width: 100%;
+  }
+  /*联系我们*/
+  .our .our_top p {
+    width: 100%;
+    margin-bottom: 15%;
+  }
+  .our .our_top dl {
+    width: 100%;
+    margin-right: 0;
+  }
+  .our h1 {
+    width: 75%;
+    margin: 5% auto;
+  }
+  .our h1 b, .our h1 i, .our h1 em {
+    display: block;
+  }
+
+}
