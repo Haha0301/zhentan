@@ -88,12 +88,9 @@ $(function () {
     var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-      $('#bigOl li').touchstart(function () {
+      $('#bigOl li').click(function () {
         $('#bigOl li').removeClass('active')
         $(this).addClass('active')
-      })
-      $('#bigOl li').touchend(function () {
-        $('#bigOl li').removeClass('active')
       })
     } else {
       $('#bigOl li').mouseenter(function () {
