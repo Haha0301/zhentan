@@ -89,11 +89,11 @@ $(function () {
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
       alert(1)
-      $('#bigOl li').click(function () {
-        alert(2)
-        $('#bigOl li').removeClass('active')
-        $(this).addClass('active')
-      })
+      // $('#bigOl li').click(function () {
+      //   alert(2)
+      //   $('#bigOl li').removeClass('active')
+      //   $(this).addClass('active')
+      // })
     } else {
       $('#bigOl li').mouseenter(function () {
         $('#bigOl li').removeClass('active')
