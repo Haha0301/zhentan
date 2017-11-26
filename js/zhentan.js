@@ -90,7 +90,7 @@ $(function () {
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
       alert(1)
       // document.writeln("phone");
-      $('#bigOl li').click(function () {
+      $('#bigOl li').touchstart(function () {
         $('#bigOl li').removeClass('active')
         $(this).addClass('active')
       })
