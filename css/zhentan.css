@@ -3,13 +3,12 @@
 }
 .navCon {
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
 }
 .logoCon {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   background: #0e0e0e;
   text-align: center;
 }
@@ -26,6 +25,9 @@
   color: #bbac8e;
   line-height: 48px;
   text-align: center;
+  position: fixed;
+  left: 0;
+  z-index: 99;
 }
 .navCon p span {
   margin-right: 7.8%;
@@ -43,8 +45,10 @@
   background: url('../img/bg_total.png') no-repeat;
   background-size: 100% 100%;
  /* height: 714px;*/
-  margin-top: -2%;
   overflow: hidden;
+  position: relative;
+  z-index: 10;
+  margin-top: -2%;
 }
 .banner ol {
   color: #fff;
@@ -252,7 +256,7 @@
   width: 69.4%;
   margin: 6.5% auto 2.2%;
   padding-bottom: 3.8%;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid #666;
 } 
 .our .our_top p {
   width: 49.5%;
@@ -266,7 +270,7 @@
 .our .our_top dl {
   width: 35.5%;
   margin-right: 4%;
-  color: #fff;
+  color: #808080;
 }
 .our .our_top dl dt {
   font-size: 24px;
@@ -279,7 +283,7 @@
   margin-bottom: 9%;
 }
 .our h1 {
-  color: #acacac;
+  color: #666;
   text-align: center;
   margin-bottom: 5%;
 }
@@ -291,12 +295,13 @@
 }
 .hide_nav .hide_btn {
   cursor: pointer;
-  width: 15px;
+  width: 4%;
   height: 15px;
   position: fixed;
   right: 11%;
   top: 2%;
   text-align: center;
+  z-index: 999;
 }
 .hide_nav .hide_btn li {
   width: 80%;
@@ -310,6 +315,9 @@
   background: rgb(0, 0, 0);
   color: #bbac8e;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999
 }
 .hide_nav .hide_con li {
   padding: 2% 0;
@@ -322,8 +330,23 @@
   font-weight: 700;
 }
 
-/*适应小屏*/ 
-@media screen and (max-width: 950px) {
+/*适应小屏*/
+/*@media screen and (min-width: 2000px) {
+  .banner {
+    margin-top: -3%;
+  }
+} 
+@media screen and (max-width: 1500px) {
+  .banner {
+    margin-top: -1.5%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .banner {
+    margin-top: -1%;
+  }
+}*/
+@media screen and (max-width: 1000px) {
   /*导航显示*/
   .logoCon img {
     padding: 4% 0 3%;

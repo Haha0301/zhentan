@@ -1,11 +1,14 @@
 $(function () {
   // 点击头部导航滚动
+  var logCon = $('.logoCon').height()
+  $('#navTitle').css('top', logCon)
+  $('#hideNav').css('top', logCon)
   $('#navTitle span').click(function () {
     $('#navTitle span').removeClass('active')
     $(this).addClass('active')
     var boxCon = $('#box div').eq($(this).index() + 4)
-    var navCon = $('#navBox').height()
-    var conTop = boxCon.offset().top - navCon
+    var navCon = $('#navTitle').height()
+    var conTop = boxCon.offset().top - (navCon + logCon)
     $('body,html').animate({scrollTop: conTop},1000)
   })
   // 隐藏导航条
@@ -14,8 +17,7 @@ $(function () {
     $('#hideNav li').removeClass('active')
     $(this).addClass('active')
     var boxCon = $('#box div').eq($(this).index() + 4)
-    var navCon = $('.logoCon').height()
-    var conTop = boxCon.offset().top - navCon
+    var conTop = boxCon.offset().top - logCon
     $('body,html').animate({scrollTop: conTop},1000)
   })
   //导航按钮
@@ -27,7 +29,10 @@ $(function () {
     }
   })
   //  头部文字1s后淡入
-  $('#textOl').animate({opacity: '1'}, 1000)
+  setTimeout(function () {
+    $('#textOl').animate({opacity: '1'}, 2000)
+  }, 1000)
+  
   // 应用场景图片切换
   // 点击标题
   $('#scenNav span').click(function () {
@@ -60,50 +65,45 @@ $(function () {
         $('#scenCon li').eq(iNow-1).find('p').addClass('active')
       }
     };
-  var tid = setInterval(next,2000);
+  var tid = setInterval(next,1000);
   next();
-  $('#scenCon').mouseenter(function () {
+  $('#scen').mouseenter(function () {
     clearInterval(tid);
   })
-  $('#scenCon').mouseleave(function () {
-    tid = setInterval(next,2000);
-    next();
+  $('#scen').mouseleave(function () {
+    tid = setInterval(next,1000);
   })
-  $('#scenNav').mouseenter(function () {
-    clearInterval(tid);
+  // 屏幕放缩
+  $(window).resize(function() {
+    logCon = $('.logoCon').height()
+    $('#navTitle').css('top', logCon)
+    $('#hideNav').css('top', logCon)
   })
-  $('#scenNav').mouseleave(function () {
-    tid = setInterval(next,2000);
-    next();
+  // 滚动监听
+  $(window).scroll(function() {
+    $('.logoCon').css('zIndex', '99')
+    if ($(document).scrollTop() == 0) {
+      $('.logoCon').css('zIndex', '1')
+    }
   })
+  
   // 判断移动端 
-  // function browserRedirect() {
-  //   var sUserAgent = navigator.userAgent.toLowerCase();
-  //   var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-  //   var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-  //   var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-  //   var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-  //   var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-  //   var bIsAndroid = sUserAgent.match(/android/i) == "android";
-  //   var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-  //   var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-  //   if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-  //     alert(1)
-  //     $('#bigOl li').click(function () {
-  //       alert(2)
-  //       $('#bigOl li').removeClass('active')
-  //       $(this).addClass('active')
-  //     })
-  //   } else {
-  //     $('#bigOl li').mouseenter(function () {
-  //       $('#bigOl li').removeClass('active')
-  //       $(this).addClass('active')
-  //     })
-  //     $('#bigOl li').mouseleave(function () {
-  //       $('#bigOl li').removeClass('active')
-  //     })
-  //   }
-  // }
+  function browserRedirect() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+      $('.hide_nav .hide_btn').css('top', '2%')
+    } else {
+      $('.hide_nav .hide_btn').css('top', '8%')
+    }
+  }
  
-  // browserRedirect();
+  browserRedirect();
 })
