@@ -331,7 +331,7 @@
 }
 
 /*适应小屏*/
-/*@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2000px) {
   .banner {
     margin-top: -3%;
   }
@@ -345,7 +345,7 @@
   .banner {
     margin-top: -1%;
   }
-}*/
+}
 @media screen and (max-width: 1000px) {
   /*导航显示*/
   .logoCon img {

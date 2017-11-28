@@ -65,13 +65,13 @@ $(function () {
         $('#scenCon li').eq(iNow-1).find('p').addClass('active')
       }
     };
-  var tid = setInterval(next,1000);
+  var tid = setInterval(next,3000);
   next();
   $('#scen').mouseenter(function () {
     clearInterval(tid);
   })
   $('#scen').mouseleave(function () {
-    tid = setInterval(next,1000);
+    tid = setInterval(next,3000);
   })
   // 屏幕放缩
   $(window).resize(function() {
