@@ -2,32 +2,32 @@ $(function () {
   // 点击头部导航滚动
   var logCon = $('.logoCon').height()
   $('#navTitle').css('top', logCon)
-  $('#hideNav').css('top', logCon)
+  // $('#hideNav').css('top', logCon)
   $('#navTitle span').click(function () {
     $('#navTitle span').removeClass('active')
     $(this).addClass('active')
-    var boxCon = $('#box div').eq($(this).index() + 4)
+    var boxCon = $('#box div').eq($(this).index() + 3)
     var navCon = $('#navTitle').height()
     var conTop = boxCon.offset().top - (navCon + logCon)
     $('body,html').animate({scrollTop: conTop},1000)
   })
   // 隐藏导航条
-  $('#hideNav li').click(function () {
-    $('#hideNav').hide()
-    $('#hideNav li').removeClass('active')
-    $(this).addClass('active')
-    var boxCon = $('#box div').eq($(this).index() + 4)
-    var conTop = boxCon.offset().top - logCon
-    $('body,html').animate({scrollTop: conTop},1000)
-  })
+  // $('#hideNav li').click(function () {
+  //   $('#hideNav').hide()
+  //   $('#hideNav li').removeClass('active')
+  //   $(this).addClass('active')
+  //   var boxCon = $('#box div').eq($(this).index() + 4)
+  //   var conTop = boxCon.offset().top - logCon
+  //   $('body,html').animate({scrollTop: conTop},1000)
+  // })
   //导航按钮
-  $('.hide_nav .hide_btn').click(function () {
-    if ($('#hideNav').css('display') == 'block') {
-      $('#hideNav').hide()
-    } else {
-      $('#hideNav').show()
-    }
-  })
+  // $('.hide_nav .hide_btn').click(function () {
+  //   if ($('#hideNav').css('display') == 'block') {
+  //     $('#hideNav').hide()
+  //   } else {
+  //     $('#hideNav').show()
+  //   }
+  // })
   //  头部文字1s后淡入
   setTimeout(function () {
     $('#textOl').animate({opacity: '1'}, 2000)
@@ -77,7 +77,7 @@ $(function () {
   $(window).resize(function() {
     logCon = $('.logoCon').height()
     $('#navTitle').css('top', logCon)
-    $('#hideNav').css('top', logCon)
+    // $('#hideNav').css('top', logCon)
   })
   // 滚动监听
   $(window).scroll(function() {
@@ -88,22 +88,22 @@ $(function () {
   })
   
   // 判断移动端 
-  function browserRedirect() {
-    var sUserAgent = navigator.userAgent.toLowerCase();
-    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-    var bIsAndroid = sUserAgent.match(/android/i) == "android";
-    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-      $('.hide_nav .hide_btn').css('top', '2%')
-    } else {
-      $('.hide_nav .hide_btn').css('top', '8%')
-    }
-  }
+  // function browserRedirect() {
+  //   var sUserAgent = navigator.userAgent.toLowerCase();
+  //   var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+  //   var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+  //   var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+  //   var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+  //   var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+  //   var bIsAndroid = sUserAgent.match(/android/i) == "android";
+  //   var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+  //   var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+  //   if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+  //     $('.hide_nav .hide_btn').css('top', '2%')
+  //   } else {
+  //     $('.hide_nav .hide_btn').css('top', '8%')
+  //   }
+  // }
  
-  browserRedirect();
+  // browserRedirect();
 })

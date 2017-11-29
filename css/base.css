@@ -9,6 +9,7 @@ body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd {
 		list-style: none;
 	}
 	body {
+		min-width: 1200px;
 		font-size: 14px;
 		font-family: "微软雅黑";
 		height: 100%;

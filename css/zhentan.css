@@ -1,10 +1,13 @@
 .wrap {
+  min-width: 1200px;
   width: 100%;
 }
 .navCon {
+  min-width: 1200px;
   width: 100%;
 }
 .logoCon {
+  min-width: 1200px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -17,7 +20,8 @@
   background-size: 100%;
   padding: 35px 0 20px;
 }
-.navCon p {
+.navCon>p {
+  min-width: 1200px;
   width: 100%;
   height: 48px;
   background: rgba(0, 0, 0, 0.2);
@@ -41,6 +45,7 @@
 }
 /*第一部分*/
 .banner {
+  min-width: 1200px;
   width: 100%;
   background: url('../img/bg_total.png') no-repeat;
   background-size: 100% 100%;
@@ -63,6 +68,7 @@
 }
 /*第二部分*/
 .core {
+  min-width: 1200px;
   text-align: center;
   background: url('../img/bg_check.png') #f6f6f6 no-repeat 0px 100%;
   background-size: 100%;
@@ -121,6 +127,7 @@
 }
 /*第三部分*/
 .function {
+  min-width: 1200px;
   text-align: center;
   /*height: 630px;*/
   background: url('../img/bg_core.png') no-repeat;
@@ -128,6 +135,7 @@
   overflow: hidden;
 }
 .function ul {
+
   padding-bottom: 7%;
 }
 .function ul>li:first-child, .function ul>li:nth-child(2) {
@@ -183,6 +191,7 @@
 }
 /*第四部分*/
 .scenarios {
+  min-width: 1200px;
   text-align: center;
   overflow: hidden;
 }
@@ -233,6 +242,7 @@
 }
 /*第五部分*/
 .team {
+  min-width: 1200px;
   text-align: center;
   overflow: hidden;
 }
@@ -249,6 +259,7 @@
 }
 /*第六部分*/
 .our {
+  min-width: 1200px;
   background: #1b1b1b;
   overflow: hidden;
 }
@@ -288,8 +299,20 @@
   margin-bottom: 5%;
 }
 
+/*适应大小屏*/
+/*@media screen and (min-width: 2000px) {
+  .banner {
+    margin-top: -3%;
+  }
+} 
+@media screen and (max-width: 1500px) {
+  .banner {
+    margin-top: -1.5%;
+  }
+}*/
+
 /*折叠导航*/
-.hide_nav {
+/*.hide_nav {
   width: 100%;
   display: none;
 }
@@ -329,9 +352,9 @@
 .hide_nav .hide_con li.active {
   font-weight: 700;
 }
-
+*/
 /*适应小屏*/
-@media screen and (min-width: 2000px) {
+/*@media screen and (min-width: 2000px) {
   .banner {
     margin-top: -3%;
   }
@@ -346,9 +369,9 @@
     margin-top: -1%;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {*/
   /*导航显示*/
-  .logoCon img {
+  /*.logoCon img {
     padding: 4% 0 3%;
   }
   .navCon p {
@@ -356,13 +379,13 @@
   }
   .hide_nav {
     display: block;
-  }
+  }*/
   /*banner图*/
-  .banner ol {
+  /*.banner ol {
     margin: 28% 0 19% 19.7%;
-  }
+  }*/
   /*鉴定*/
-  .core ul>li:nth-child(4), .team>ul>li:nth-child(4) {
+  /*.core ul>li:nth-child(4), .team>ul>li:nth-child(4) {
     width: 75%;
     margin: 5% auto 0;
   } 
@@ -377,30 +400,30 @@
   }
   .core ul .lastLi ol li:last-child {
     text-align: center;
-  }
+  }*/
   /*核心优势*/
-  .function ul ol li {
+  /*.function ul ol li {
     width: 100%;
     margin-bottom: 5%;
     padding: 6% 4% 5%;
   }
   .function ul ol li:nth-child(2) {
     margin: 0 0 5%;
-  }
+  }*/
   /*应用场景*/
-  .scenarios ul p {
+  /*.scenarios ul p {
     margin-bottom: 5%;
-  }
+  }*/
   /*技术团队*/
-  .team>ul>li:last-child {
+  /*.team>ul>li:last-child {
     width: 75%;
     margin: 5% auto;
   }
   .team>ul>li:last-child img {
     width: 100%;
-  }
+  }*/
   /*联系我们*/
-  .our .our_top p {
+  /*.our .our_top p {
     width: 100%;
     margin-bottom: 15%;
   }
@@ -416,4 +439,4 @@
     display: block;
   }
 
-}
+}*/
