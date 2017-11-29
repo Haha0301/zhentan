@@ -87,8 +87,14 @@ $(function () {
     }
     // 左右滚动
     var l = $(window).scrollLeft()
-    $('.logoCon').css('left', -l)
-    $('#navTitle').css('left', -l)
+    if ( l == $(window).width()) {
+      $('.logoCon').css('left', l)
+      $('#navTitle').css('left', l)
+    } else {
+      $('.logoCon').css('left', -l)
+      $('#navTitle').css('left', -l)
+    }
+    
   })
   
   // 判断移动端 
