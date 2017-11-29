@@ -85,6 +85,10 @@ $(function () {
     if ($(document).scrollTop() == 0) {
       $('.logoCon').css('zIndex', '1')
     }
+    // 左右滚动
+    var l = $(window).scrollLeft()
+    $('.logoCon').css('left', -l)
+    $('#navTitle').css('left', -l)
   })
   
   // 判断移动端 
